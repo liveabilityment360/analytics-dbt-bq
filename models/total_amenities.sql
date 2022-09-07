@@ -5,7 +5,7 @@ WITH total_amenities AS (
 		  ,cdata.suburb as suburb
 		  ,SUM(cdata.count_amenities) as total_count_amenities
 	FROM {{ref('combined_data')}} cdata
-	GROUP BY cdata.postcode
+	GROUP BY cdata.postcode, cdata.suburb
 
 )
 
