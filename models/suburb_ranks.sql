@@ -7,7 +7,7 @@ WITH ranks AS (
               ,DENSE_RANK() OVER (
                  ORDER BY (totamn.total_count_amenities) DESC
                ) rankso
-        FROM analytics_data.total_amenities totamn
+        FROM {{ref('total_amenities')}} totamn
         WHERE totamn.postcode BETWEEN 3000 and 3999
 
 )

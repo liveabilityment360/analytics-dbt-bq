@@ -60,7 +60,7 @@ WITH distribution_amenities AS (
            GROUP BY sp.postcode, sp.city, sp.categories		   
         )
         WHERE postcode IN
-           (SELECT rankt.postcode from `analytics_data.suburb_ranks` rankt
+           (SELECT rankt.postcode from {{ref('suburb_ranks')}} rankt
                WHERE rankt.rankso IN (1,2,3,4,5,6,7,8))
 )
 
