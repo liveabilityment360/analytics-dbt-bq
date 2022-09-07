@@ -13,4 +13,4 @@ WITH ranks AS (
 )
 
 SELECT * FROM ranks
-WHERE rankso IN (1,2,3,4,5,6,7)
+WHERE rankso IN (2,3,4,5,6,7)
