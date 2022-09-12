@@ -5,7 +5,7 @@ my_new_project:  # your profile name from dbt_project.yml
     dev:
       type: bigquery
       method: oauth
-      project: liveability-demo
+      project: mvp-liveability
       location: us-west1 
       # name of the project in BigQuery
       dataset: analytics_data  
