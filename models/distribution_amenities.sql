@@ -59,8 +59,8 @@ WITH distribution_amenities AS (
            WHERE sp.postcode IS NOT NULL
            GROUP BY sp.postcode, sp.city, sp.categories		   
         )
-        WHERE postcode IN
-           (SELECT rankt.postcode from {{ref('suburb_ranks')}} rankt
+        WHERE suburb IN
+           (SELECT rankt.suburb from {{ref('suburb_ranks')}} rankt
                WHERE rankt.rankso IN (1,2,3,4,5,6,7))
 )
 
