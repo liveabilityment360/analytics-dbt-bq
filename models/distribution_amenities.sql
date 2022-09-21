@@ -61,7 +61,7 @@ WITH distribution_amenities AS (
         )
         WHERE postcode IN
            (SELECT rankt.postcode from {{ref('suburb_ranks')}} rankt
-               WHERE rankt.rankso IN (1,2,3,4,5,6,7,8))
+               WHERE rankt.rankso IN (1,2,3,4,5,6,7))
 )
 
 SELECT * FROM distribution_amenities
